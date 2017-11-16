@@ -6,8 +6,8 @@ game = {
     'height': 10,
     'x-moves': [
         {'x': 0, 'y': 0},
-        {'x': 2, 'y': 2},
-        {'x': 4, 'y': 4},
+        {'x': 1, 'y': 0},
+        {'x': 2, 'y': 0},
         {'x': 6, 'y': 6},
         {'x': 8, 'y': 8}
 
@@ -21,17 +21,17 @@ game = {
         ]
 }
 i=2
-while five.get_winner(game) == ' ':
+next_player='X'
+while five.get_winner(game, next_player) == ' ':
 
     # Print the game board.
-    five.print_game(game)
+    five.print_game(game, next_player)
 
     # Ask the user to enter coordinates.
     next_player = five.get_next_players_turn(game, i)
 
     print("Enter the x and y coordinate for the cell to place "+next_player+" in.")
     print("Separate the coordinates by space, e.g: 3 5")
-    print(game['moves'])
 
     are_entered_coordinates_ok = False
 
