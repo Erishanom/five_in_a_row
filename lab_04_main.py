@@ -53,5 +53,5 @@ while five.get_winner(game, next_player) == ' ':
             i+=1
     five.make_move(game, x, y, next_player)
 
-five.print_game(game)
-print("The game is over, and the winner is: "+five.get_winner(game)+"!")
+five.print_game(game, next_player)
+print("The game is over, and the winner is: "+five.get_winner(game, next_player)+"!")
